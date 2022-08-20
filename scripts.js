@@ -1,146 +1,146 @@
-// /* 1. Сделайте функцию, которая отнимает от первого числа второе и делит на третье. Числа передаются параметром. */
+/* 1. Сделайте функцию, которая отнимает от первого числа второе и делит на третье. Числа передаются параметром. */
 
-// function f1 (a1, b1, c1) {
-//     return (a1-b1) / c1
-// }
+function f1 (a1, b1, c1) {
+    return (a1-b1) / c1
+}
 
-// let res1 = f1(20, 8, 4);
-// console.log (res1);
-
-
-// /* 2. Сделайте функцию, которая возвращает куб числа и его квадрат. Число
-// передается параметром. */
-
-// function f2 (a2) {
-//     return 'Квадрат числа: ' + Math.pow(a2, 2) + ';' + ' ' + 'Куб числа: ' + Math.pow(a2, 3) + ';'
-// }
-
-// let res2 = f2(6);
-// console.log (res2);
+let res1 = f1(20, 8, 4);
+console.log (res1);
 
 
-// /* 3. Напишите функции min и max, которые возвращают меньшее и большее из чисел a и b. */
+/* 2. Сделайте функцию, которая возвращает куб числа и его квадрат. Число
+передается параметром. */
 
-// function FMinMax (a3, b3) {
-//     var a3 = +prompt ('Введите первое число: ');
-//     var b3 = +prompt ('Введите второе число: ');
-//     if (a3 < b3) {
-//         document.write ('Min:' + a3 + '</br>' + 'Max:' + b3 + '</br>');
-//     } else {
-//         document.write ('Max:' + a3 + '</br>' + 'Min:' + b3 + '</br>');
-//     }
-// }
+function f2 (a2) {
+    return 'Квадрат числа: ' + Math.pow(a2, 2) + ';' + ' ' + 'Куб числа: ' + Math.pow(a2, 3) + ';'
+}
 
-// FMinMax();
+let res2 = f2(6);
+console.log (res2);
 
 
-// /* 4. Напишите две функции: первая ф-ция должна возвращать массив с
-// числовыми значениями, диапазон которых должен вводиться пользователем
-// с клавиатуры; вторая – выводить полученный массив. */
+/* 3. Напишите функции min и max, которые возвращают меньшее и большее из чисел a и b. */
 
-// let arr4 = [];
+function FMinMax (a3, b3) {
+    var a3 = +prompt ('Введите первое число: ');
+    var b3 = +prompt ('Введите второе число: ');
+    if (a3 < b3) {
+        document.write ('Min:' + a3 + '</br>' + 'Max:' + b3 + '</br>');
+    } else {
+        document.write ('Max:' + a3 + '</br>' + 'Min:' + b3 + '</br>');
+    }
+}
 
-// let arr4_1 = function() {
-//     let arrStart = +prompt('Первое число массива:');
-//     let arrFinish = +prompt('Последнее число массива:');
+FMinMax();
+
+
+/* 4. Напишите две функции: первая ф-ция должна возвращать массив с
+числовыми значениями, диапазон которых должен вводиться пользователем
+с клавиатуры; вторая – выводить полученный массив. */
+
+let arr4 = [];
+
+let arr4_1 = function() {
+    let arrStart = +prompt('Первое число массива:');
+    let arrFinish = +prompt('Последнее число массива:');
     
-//     for (arrStart; arrStart <= arrFinish; arrStart++) {
-//             arr4.push(arrStart);
-//     }
-//         return(arr4);
-// }
+    for (arrStart; arrStart <= arrFinish; arrStart++) {
+            arr4.push(arrStart);
+    }
+        return(arr4);
+}
 
-// let arr4_2 = function() {
-//         return(document.write(arr4 + '</br>' + '</br>'));
-// }
+let arr4_2 = function() {
+        return(document.write(arr4 + '</br>' + '</br>'));
+}
 
-// console.log(arr4_1()); 
-// arr4_2();
-
-
-// /* 5. Сделайте функцию isEven() (even - это четный), которая параметром
-// принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное — false. */
-
-// function isEven () {
-//     let a5 = +prompt('Введите число:');
-//     if (a5 % 2 === 0) {
-//         return (console.log(true))
-//     } else {
-//         return (console.log(false))
-//     }
-// }
-
-// isEven();
+console.log(arr4_1()); 
+arr4_2();
 
 
-// /* 6. Напишите ф-цию, в которую передается массив с целыми числами.
-// Верните новый массив, где останутся лежать только четные из этих чисел.
-// Для этого используйте вспомогательную функцию isEven из предыдущей
-// задачи. */
+/* 5. Сделайте функцию isEven() (even - это четный), которая параметром
+принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное — false. */
+
+function isEven () {
+    let a5 = +prompt('Введите число:');
+    if (a5 % 2 === 0) {
+        return (console.log(true))
+    } else {
+        return (console.log(false))
+    }
+}
+
+isEven();
+
+
+/* 6. Напишите ф-цию, в которую передается массив с целыми числами.
+Верните новый массив, где останутся лежать только четные из этих чисел.
+Для этого используйте вспомогательную функцию isEven из предыдущей
+задачи. */
 
 
 
 
-// /* 7. Напишите ф-цию, которая рисует следующую пирамидку (исп. вложенные циклы):
-// 1
-// 22
-// 333
-// 4444
-// 55555
-// 666666
-// 7777777
-// 88888888
-// 999999999
-// Кол-во рядов должно вводиться параметром. Если пользователь ввел доп.
-// параметр, непредусмотренный ф-цией по умолчанию - один любой символ,
-// кроме пробела, то пирамида должна быть нарисована этим символом. */
+/* 7. Напишите ф-цию, которая рисует следующую пирамидку (исп. вложенные циклы):
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+Кол-во рядов должно вводиться параметром. Если пользователь ввел доп.
+параметр, непредусмотренный ф-цией по умолчанию - один любой символ,
+кроме пробела, то пирамида должна быть нарисована этим символом. */
 
-// function pyramid () {
-//     for (var i = 1; i <= 9; i++) {
-// 	for (var j = 1; j <= i; j++) {
-// 		document.write(i);
-// 	}
-// 	document.write('<br>');
-//     }
-// }
-// pyramid ();
-
-
-// /* 8. Напишите ф-цию, которая рисует равнобедренный треугольник из
-// звездочек:
-
-// *
-// ***
-// *****
-// *******
-// *********
-
-// Кол-во рядов должно вводиться с клавиатуры. Доп., напишите такую же ф-цию, но которая выведет перевернутый треугольник. */
-
-// function treug(num, reverse = false) {
-//     let initialValue = reverse ? num : 1,
-//     stobValue = reverse ? 0 : num;
-
-//     for (let i = initialValue; (reverse ? i > stobValue : i < stobValue); (reverse ? i-- : i++)){
-//         document.write('<pre>' + ' '.repeat(num - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(num - i) + '</pre>');
-//     }
-// }
+function pyramid () {
+    for (var i = 1; i <= 9; i++) {
+	for (var j = 1; j <= i; j++) {
+		document.write(i);
+	}
+	document.write('<br>');
+    }
+}
+pyramid ();
 
 
-// /* 9. Напишите ф-цию, которая возвращает массив заполненный числами
-// Фибоначи от 0 до 1000. */
+/* 8. Напишите ф-цию, которая рисует равнобедренный треугольник из
+звездочек:
 
-// function fib (num){
-//     return num <= 1 ? num : fib(num - 1) + fib(num - 2)
-// }
+*
+***
+*****
+*******
+*********
 
-// function fibArr() {
-//     let rez = [];
-//     for (let i = 0; i < 1000; i++) {
-//         rez.push(fib(i));
-//     }
-//     console.log(rez);
-// }
+Кол-во рядов должно вводиться с клавиатуры. Доп., напишите такую же ф-цию, но которая выведет перевернутый треугольник. */
+
+function treug(num, reverse = false) {
+    let initialValue = reverse ? num : 1,
+    stobValue = reverse ? 0 : num;
+
+    for (let i = initialValue; (reverse ? i > stobValue : i < stobValue); (reverse ? i-- : i++)){
+        document.write('<pre>' + ' '.repeat(num - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(num - i) + '</pre>');
+    }
+}
+
+
+/* 9. Напишите ф-цию, которая возвращает массив заполненный числами
+Фибоначи от 0 до 1000. */
+
+function fib (num){
+    return num <= 1 ? num : fib(num - 1) + fib(num - 2)
+}
+
+function fibArr() {
+    let rez = [];
+    for (let i = 0; i < 1000; i++) {
+        rez.push(fib(i));
+    }
+    console.log(rez);
+}
 
 
 
@@ -155,10 +155,10 @@
 
 Размер рамки должен определятся */
 
-function f12(name, surName, lastName, groupNum) {
+function f12(name, lastName, surName, groupNum) {
     let title = `Домашняя работа: «Функции»`;
     let subTitle = `Выполнил: студент гр. ${groupNum}`;
-    let nameText = `${lastName} ${name} ${surName}`;
+    let nameText = `${name} ${lastName} ${surName}`;
 
     let maxStr = 0;
     if (title.length > maxStr) maxStr = title.length;
@@ -175,12 +175,7 @@ function f12(name, surName, lastName, groupNum) {
         ramka += '*';
     }
 
-    console.log (`
-    ${ramka}
-    ${title}
-    ${subTitle}
-    ${nameText}
-    ${ramka}`);
+    console.log (`${ramka}\n${title}\n${subTitle}\n${nameText}\n${ramka}`);
 }
 
 function f12_2(str, l){
